@@ -1,0 +1,101 @@
+.card-container, .card-container a {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 270px;
+    min-width: 270px;
+    border-radius: 25px;
+    justify-self: center;
+    color: black;
+    position: relative;
+}
+
+.card-container h1 {
+    font-size: clamp(1rem, 1.5vw, 2rem) !important;
+    text-align: center;
+}
+
+.card-container .div-img {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.card-container .div-img img {
+    width: 100%;
+    height: auto;
+    transform: rotate(30deg);
+    position: absolute;
+    top: -25px;
+    right: -20px;
+}
+
+.product-card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 50%;
+    border-radius: 50% 50% 0% 0% / 8% 8% 90% 90%;
+    background-color: white;
+    position: relative;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: 100%;
+    /*el width del contenedor es de 270, agregamos esta linea porque sino se ven dos lineas a los costados del color de fondo del contenedor, con esto lo tapamos*/
+    align-self: center;
+}
+
+.product-card-details .circle-color {
+    width: 40px;
+    height: 40px;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+}
+
+.product-card-details .colors {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-card-details span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.favourite-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.16);
+    transition: 0.5s;
+    z-index: 9999999!important;
+}
+
+.favourite-btn:hover {
+    color: rgba(235, 1, 1, 0.918);
+    background-color: rgba(255, 0, 0, 0.16);
+    scale: 1.3;
+    transition: 0.5s;
+}
+
+.fav-active {
+    transform: rotate(360deg);
+    background-color: rgba(255, 0, 0, 0.377);
+    color: rgba(235, 1, 1, 0.918);
+}

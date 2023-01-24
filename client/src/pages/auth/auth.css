@@ -1,0 +1,107 @@
+.auth {
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202123;
+}
+
+.auth .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.auth .form-register {
+    width: clamp(310px, 90vw, 60%);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.auth .inputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.auth input {
+    width: 100%;
+    height: 2rem;
+    background: none;
+    outline: none;
+    caret-color: #202123;
+    border: 0;
+    border-bottom: 2px solid #4B4C4E;
+    font-size: 1rem;
+    color: white;
+}
+
+.auth input:focus {
+    border-bottom: 3px solid #4E607E;
+}
+
+.auth .label {
+    color: #4B4C4E;
+}
+
+.auth input:focus~.label {
+    color: #4E607E !important;
+}
+
+.campo-obligatorio {
+    border-bottom: 2px solid rgb(117, 32, 32) !important;
+}
+
+.campo-obligatorio~.label {
+    color: rgb(117, 32, 32);
+}
+
+.primaryColor {
+    color: rgb(117, 32, 32);
+    margin-top: .5rem;
+}
+
+.auth .button {
+    width: 100%;
+    height: 2.5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #4E607E;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+.auth a{
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.div-img-register, .div-img-login {
+    flex: 1;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media screen and (max-width:768px) {
+    .auth .form-container{
+        width: 100%;
+        padding: 1rem;
+    }
+    .auth .div-img{
+        display: none;
+    }
+}

@@ -1,0 +1,1 @@
+1) Agregarle un cartel de "producto agregado al carrito" utilizar la libreria toast

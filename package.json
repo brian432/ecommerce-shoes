@@ -1,0 +1,22 @@
+{
+  "name": "shoes-ecommerce",
+  "private": true,
+  "workspaces": [
+    "client",
+    "api"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --prefix=client",
+    "start": "npm start --prefix=api",
+    "tsc": "npm run tsc --prefix=api"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-minimizer-webpack-plugin": "^4.2.2"
+  }
+}

@@ -1,0 +1,290 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.headerLeft .logo:hover {
+    color: rgba(196, 196, 196, 0.579);
+}
+
+.headerRight,
+.headerCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icons {
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icons:hover {
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.579);
+}
+
+.icons .quantity {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    right: 0;
+    top: -5px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-menu {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    flex-direction: column;
+    min-height: 70px;
+    width: 150px;
+    padding: 5px;
+    background: rgba(90, 90, 90);
+    justify-content: space-around;
+}
+
+.user-menu a{
+    color: white!important;
+}
+
+.user-menu a:hover{
+    background-color: rgb(130, 130, 130);
+}
+
+.user-menu span{
+    margin-right: 5px;
+}
+
+.user-menu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent rgba(90, 90, 90) transparent transparent;
+    transform: rotate(90deg);
+}
+
+.movilLink {
+    display: none;
+}
+
+header a {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.auth-header a {
+    color: black;
+}
+
+.auth-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.auth-header section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#hamburguesa {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburguesa div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*animacion*/
+.linea1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.linea2 {
+    opacity: 0;
+}
+
+.linea3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    .fadeOutUp{
+        -webkit-animation-name: fad!important;
+        animation-name: fad!important;
+    }
+    .fadeInDown{
+        -webkit-animation-name: fad!important;
+        animation-name: fad!important;
+    }
+}
+
+@media (max-width:500px) {
+    .user-menu{
+        display: none!important;
+    }
+    
+    #hamburguesa {
+        display: block;
+    }
+
+    .movilLink {
+        display: block;
+    }
+
+    .section-auth {
+        display: none !important;
+    }
+
+    .menu-disable {
+        display: flex !important;
+        position: absolute;
+        padding-top: 10px;
+        top: 60px;
+        height: 100vh;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.746);
+        animation: menu-disable .5s forwards;
+    }
+
+    .menu-disable a {
+        display: none;
+    }
+
+    .menu-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10px;
+        top: 60px;
+        height: calc(100vh - 60px);
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.746);
+        animation: menu-active .5s forwards;
+    }
+
+    .menu-active a {
+        color: white;
+        z-index: 999;
+    }
+}
+
+@keyframes menu-active {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes menu-disable {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}

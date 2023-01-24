@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"); /*iconos google*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --toastify-color-success: rgba(17, 17, 17, 0.297);
+}
+
+body, #root{
+    max-width: 1920px;
+    min-width: 320px;
+    min-height: calc(100vh - 80px);
+    margin: 0 auto;
+    background-color: rgb(243, 243, 243);
+}
+/*Global styles*/
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.clickActive:active{
+    transform: translateY(2px);
+}
