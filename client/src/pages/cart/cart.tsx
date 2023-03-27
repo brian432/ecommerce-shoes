@@ -38,6 +38,21 @@ export const Cart: FC = () => {
         dispatch(createStripeCard({ tokenId: token.id, amount: total * 100, cards }))
     };
 
+    const billingAddress = {
+        name: 'John Doe',
+        line1: '123 Main St',
+        city: 'Anytown',
+        state: 'CA',
+        country: 'US',
+        postal_code: '12345',
+        phone: '555-555-5555',
+        email: 'johndoe@example.com',
+        number: '4242424242424242', // Número de tarjeta de prueba
+        cvc: '123',
+        exp_month: '01',
+        exp_year: '2024',
+      };
+
     return (
         <div className="cart-container">
             {
@@ -55,7 +70,7 @@ export const Cart: FC = () => {
                                     <div className="product" key={id}>
                                         <Link to={`/product/${productId}`} className="productWrapper">
                                             <div className="div-img">
-                                                <img  src={`${IMG_URL}${img}`} alt={title} />
+                                                <img src={`${IMG_URL}${img}`} alt={title} />
                                             </div>
                                             <div className="detailsWrapper">
                                                 <h3>Product: {title}</h3>
@@ -93,7 +108,8 @@ export const Cart: FC = () => {
                                     amount={total * 100}
                                     billingAddress
                                     shippingAddress
-                                    description={`El total de su compra es ${total}`}
+                                    name="Nro. Trg. de prueba."
+                                    description={`'4242 4242 4242 4242' CVV: 123`}
                                     currency="USD"
                                     ComponentClass="div"
                                     label="Realizar pago"
