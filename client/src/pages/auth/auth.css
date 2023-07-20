@@ -1,5 +1,5 @@
 .auth {
-    width:100%;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@
 }
 
 .campo-obligatorio {
-    border-bottom: 2px solid rgb(117, 32, 32) !important;
+    border: 2px solid rgb(117, 32, 32) !important;
 }
 
 .campo-obligatorio~.label {
@@ -79,16 +79,17 @@
     margin-bottom: .5rem;
 }
 
-.auth a{
+.auth a {
     color: white;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition: background-color 600000s 0s, color 600000s 0s;
+    transition: background-color 600000s 0s, color 600000s 0s;
 }
 
-.div-img-register, .div-img-login {
+.div-img-register,
+.div-img-login {
     flex: 1;
     height: 100vh;
     background-position: center;
@@ -97,11 +98,12 @@ input:-webkit-autofill:focus {
 
 
 @media screen and (max-width:768px) {
-    .auth .form-container{
+    .auth .form-container {
         width: 100%;
         padding: 1rem;
     }
-    .auth .div-img{
+
+    .auth .div-img {
         display: none;
     }
 }

@@ -62,15 +62,15 @@ header {
     justify-content: space-around;
 }
 
-.user-menu a{
-    color: white!important;
+.user-menu a {
+    color: white !important;
 }
 
-.user-menu a:hover{
+.user-menu a:hover {
     background-color: rgb(130, 130, 130);
 }
 
-.user-menu span{
+.user-menu span {
     margin-right: 5px;
 }
 
@@ -121,7 +121,7 @@ header a {
 #hamburguesa div {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: var(--text-color);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -147,20 +147,24 @@ header a {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
 @-webkit-keyframes fadeOutUp {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
 }
+
 @keyframes fadeOutUp {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
@@ -176,24 +180,28 @@ header a {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
 }
+
 @keyframes fadeInDown {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -206,21 +214,23 @@ header a {
     header {
         padding: 1rem;
     }
-    .fadeOutUp{
-        -webkit-animation-name: fad!important;
-        animation-name: fad!important;
+
+    .fadeOutUp {
+        -webkit-animation-name: fad !important;
+        animation-name: fad !important;
     }
-    .fadeInDown{
-        -webkit-animation-name: fad!important;
-        animation-name: fad!important;
+
+    .fadeInDown {
+        -webkit-animation-name: fad !important;
+        animation-name: fad !important;
     }
 }
 
 @media (max-width:500px) {
-    .user-menu{
-        display: none!important;
+    .user-menu {
+        display: none !important;
     }
-    
+
     #hamburguesa {
         display: block;
     }

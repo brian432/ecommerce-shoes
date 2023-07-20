@@ -14,15 +14,15 @@ registerRouter.post('/', validateRegister, async (req: Request, res: Response): 
         const passwordHash = await bcrypt.hash(password, saltRounds);
 
         const uniqueUsername = await User.findOne({ username: username });
-        if (uniqueUsername) throw new Error("duplicate key error");
-        
+        if (uniqueUsername === true) throw new Error("duplicate key error");
+
         const user = new User<UserTypes>({
             username,
             email,
             passwordHash
         });
 
-        const savedUser: UserTypes = await user.save(); 
+        const savedUser: UserTypes = await user.save();
         res.status(201).json({
             status_code: 201,
             data: savedUser
